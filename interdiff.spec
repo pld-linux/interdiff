@@ -6,6 +6,7 @@ Release:	1
 License:	GPL
 Group:		Applications/Text
 Source0:	ftp://people.redhat.com/twaugh/interdiff/stable/%{name}-%{version}.tar.gz
+# Source0-md5:	339cfade7b3d96585fb579f442b7084e
 URL:		http://people.redhat.com/twaugh/interdiff/
 Requires:	diffutils
 Requires:	patch
