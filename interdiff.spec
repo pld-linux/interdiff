@@ -5,9 +5,6 @@ Version:	0.0.10
 Release:	1
 License:	GPL
 Group:		Applications/Text
-Group(de):	Applikationen/Text
-Group(fr):	Utilitaires/Texte
-Group(pl):	Aplikacje/Tekst
 Source0:	ftp://people.redhat.com/twaugh/interdiff/stable/%{name}-%{version}.tar.gz
 URL:		http://people.redhat.com/twaugh/interdiff/
 Requires:	diffutils
