@@ -1,4 +1,5 @@
 Summary:	A utility to generate incremental patches from pristine patches
+Summary(pl):	Narzêdzie generuj±ce patche przyrostowe ze zwyk³ych
 Name:		interdiff
 Version:	0.0.10
 Release:	1
@@ -9,7 +10,8 @@ Group(fr):	Utilitaires/Texte
 Group(pl):	Aplikacje/Tekst
 Source0:	ftp://people.redhat.com/twaugh/interdiff/stable/%{name}-%{version}.tar.gz
 URL:		http://people.redhat.com/twaugh/interdiff/
-Requires:	diffutils, patch
+Requires:	diffutils
+Requires:	patch
 Buildroot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -17,6 +19,12 @@ interdiff creates a unified diff that expresses the difference between
 two unified diffs (patches created with the -u option to diff). The
 diffs must both be relative to the same files. For best results, the
 diffs must have at least three lines of context.
+
+%description -l pl
+interdiff tworzy zunifikowany diff, który wyra¿a ró¿nice pomiêdzy
+dwoma zunifikowanymi diffami (patchami zrobionymi przez diff -u). Oba
+diffy musz± siê odnosiæ do tych samych plików. Dla uzyskania
+najlepszego efektu, diffy musz± mieæ co najmniej 3 linie kontekstu.
 
 %prep
 %setup -q
