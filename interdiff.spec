@@ -10,7 +10,7 @@ Source0:	ftp://people.redhat.com/twaugh/interdiff/stable/%{name}-%{version}.tar.
 URL:		http://people.redhat.com/twaugh/interdiff/
 Requires:	diffutils
 Requires:	patch
-Buildroot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 interdiff creates a unified diff that expresses the difference between
