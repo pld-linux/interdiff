@@ -1,7 +1,7 @@
 Summary:	A utility to generate incremental patches from pristine patches
 Name:		interdiff
 Version:	0.0.9
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/Text
 Group(de):	Applikationen/Text
