@@ -1,7 +1,7 @@
 Summary:	A utility to generate incremental patches from pristine patches
 Name:		interdiff
-Version:	0.0.9
-Release:	2
+Version:	0.0.10
+Release:	1
 License:	GPL
 Group:		Applications/Text
 Group(de):	Applikationen/Text
@@ -19,7 +19,7 @@ diffs must both be relative to the same files. For best results, the
 diffs must have at least three lines of context.
 
 %prep
-%setup -q -n interdiff
+%setup -q
 
 %build
 %{__make} interdiff CFLAGS="%{?debug:-O0 -g}%{!?debug:$RPM_OPT_FLAGS}"
