@@ -28,14 +28,15 @@ najlepszego efektu, diffy musz± mieæ co najmniej 3 linie kontekstu.
 %setup -q
 
 %build
-%{__make} interdiff CFLAGS="%{rpmcflags}"
+%{__make} interdiff \
+	CFLAGS="%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
 
-install interdiff $RPM_BUILD_ROOT/%{_bindir}/interdiff
-install interdiff.1 %{buildroot}/%{_mandir}/man1/interdiff.1
+install interdiff $RPM_BUILD_ROOT%{_bindir}/interdiff
+install interdiff.1 $RPM_BUILD_ROOT%{_mandir}/man1/interdiff.1
 
 %clean
 rm -rf $RPM_BUILD_ROOT
