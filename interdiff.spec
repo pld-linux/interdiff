@@ -22,7 +22,7 @@ diffs must have at least three lines of context.
 %setup -q
 
 %build
-%{__make} interdiff CFLAGS="%{?debug:-O0 -g}%{!?debug:$RPM_OPT_FLAGS}"
+%{__make} interdiff CFLAGS="%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
