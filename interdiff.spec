@@ -1,4 +1,4 @@
-Summary:	A utility to generate incremental patches from pristine patches.
+Summary:	A utility to generate incremental patches from pristine patches
 Name:		interdiff
 Version:	0.0.9
 Release:	1
@@ -7,8 +7,8 @@ Group:		Applications/Text
 Group(de):	Applikationen/Text
 Group(fr):	Utilitaires/Texte
 Group(pl):	Aplikacje/Tekst
-URL:		http://people.redhat.com/twaugh/interdiff/
 Source0:	ftp://people.redhat.com/twaugh/interdiff/stable/%{name}-%{version}.tar.gz
+URL:		http://people.redhat.com/twaugh/interdiff/
 Requires:	diffutils, patch
 Buildroot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -22,13 +22,13 @@ diffs must have at least three lines of context.
 %setup -q -n interdiff
 
 %build
-%{__make} interdiff CFLAGS="%{!?debug:%{!?debug:$RPM_OPT_FLAGS}%{?debug:-O -g}}%{?debug:-O -g}"
+%{__make} interdiff CFLAGS="%{?debug:-O0 -g}%{!?debug:$RPM_OPT_FLAGS}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
 
-install -m 755 interdiff $RPM_BUILD_ROOT/%{_bindir}/interdiff
+install interdiff $RPM_BUILD_ROOT/%{_bindir}/interdiff
 install interdiff.1 %{buildroot}/%{_mandir}/man1/interdiff.1
 
 %clean
