@@ -43,5 +43,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
+%doc BUGS ChangeLog TODO
 %attr(755,root,root) %{_bindir}/interdiff
 %{_mandir}/man1/interdiff.1*
