@@ -1,5 +1,5 @@
 Summary:	A utility to generate incremental patches from pristine patches
-Summary(pl.UTF-8):   Narzędzie generujące patche przyrostowe ze zwykłych
+Summary(pl.UTF-8):	Narzędzie generujące patche przyrostowe ze zwykłych
 Name:		interdiff
 Version:	0.0.10
 Release:	1
